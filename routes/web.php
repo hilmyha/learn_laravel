@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        'name' => 'Ahmad Haidar',
+        'email' => 'haidar@haidar.com',
+        'img_uri' => 'haidar.jpeg',
+    ]);
 });
 
 Route::get('/blog', function () {
