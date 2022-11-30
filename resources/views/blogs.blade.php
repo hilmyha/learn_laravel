@@ -1,5 +1,5 @@
 @extends('layouts.template')
 
 @section('container')
-  <h1>Landing Page</h1>
+  <h1>Blog Page</h1>
 @endsection
