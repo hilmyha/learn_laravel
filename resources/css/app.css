@@ -1,3 +1,169 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base{
+  
+
+  h1{
+    @apply text-h1 font-bold
+  }
+  h2{
+    @apply text-h2 font-bold
+  }
+  h3{
+    @apply text-h3 font-bold
+  }
+  h4{
+    @apply text-h4 font-bold
+  }
+  h5{
+    @apply text-h5 font-bold
+  }
+  h6{
+    @apply text-h6 font-bold
+  }
+
+  p{
+    @apply text-p1
+  }
+
+  body{
+    font-family: 'Poppins', sans-serif;
+  }
+
+  img{
+    @apply w-full h-full
+  }
+
+  nav{
+    @apply bg-white z-40 top-0 left-0 w-full shadow-lg border-b fixed
+  }
+
+  aside{
+    @apply py-[120px]
+  }
+
+  article{
+    @apply py-[120px]
+  }
+
+  footer{
+    @apply pt-[120px] pb-[60px] bg-black
+  }
+}
+
+@layer components{
+  /* card */
+  .card-divider{
+    @apply grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6
+  }
+  .card{
+    @apply shadow-lg hover:shadow-none p-6 grid gap-4 rounded-lg border hover:bg-primary-500 transition
+  }
+  .img-area{
+    @apply overflow-hidden mb-3 rounded-lg h-[200px] md:h-[240px]
+  }
+  .img-area img{
+    @apply object-cover w-full h-full
+  }
+
+  /* image card */
+  .card-image{
+    @apply relative flex items-end rounded-lg overflow-hidden h-[520px]
+  }
+
+  /* image card area */
+  .card-image img{
+    @apply brightness-50 hover:blur-sm hover:scale-110 transition duration-300 ease-in-out object-cover
+  }
+  .card-image .image-child{
+    @apply absolute flex
+  }
+  .card-image .image-textarea{
+    @apply text-white grid gap-3 z-20 self-end p-6
+  }
+
+  /* navbar */
+  .navbar{
+    @apply container py-4 flex justify-between items-center border
+  }
+  .navbar .nav-container {
+    @apply absolute text-p2 text-title-400 md:bg-transparent shadow-lg md:shadow-none bg-white border-b md:border-none w-full top-full left-0 md:block md:static md:w-auto
+  }
+  .navbar .nav-container ul{
+    @apply py-6 md:py-0 container md:text-start text-center transition duration-300 border gap-1
+  }
+  .nav-li{
+    @apply p-2 uppercase md:lowercase cursor-pointer md:hover:font-bold md:hover:text-primary-500 rounded-lg
+  }
+  .toggler{
+    @apply flex text-p2 text-primary-500 gap-2
+  }
+  .toggler-btn{
+    @apply py-2 px-4 md:border md:border-primary-500 rounded-lg hover:bg-primary-500 hover:text-white cursor-pointer
+  }
+
+  /* carousel */
+  .wrapper{
+    @apply w-full mt-20
+  }
+  .item{
+    @apply bg-red-500 h-[400px] md:h-[700px] overflow-hidden text-center
+  }
+  .item img{
+    @apply w-full h-full object-cover brightness-50
+  }
+  .carousel-textarea{
+    @apply absolute z-20 flex items-center top-0 left-0 h-full w-full text-white
+  }
+  .carousel-textarea .text{
+    @apply container p-4 flex flex-col gap-4 text-start
+  }
+  
+  .owl-dots{
+    @apply absolute -mt-12 z-20 w-full text-center
+  }
+  .owl-dot{
+    @apply w-[45px] h-[8px] mx-[2px] border-2 border-white rounded-lg transition hover:bg-white/80
+  }
+  .owl-dots .active{
+    @apply bg-white/80 !important
+  }
+  
+  /* feature section*/
+  .feature-section{
+    @apply container flex flex-col gap-10
+  }
+  .feature-divider{
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-6
+  }
+
+  /* top destination section */
+  .top-destination-section{
+    @apply container flex flex-col gap-10
+  }
+  .top-destination-divider{
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6
+  }
+  .top-destination-divider a{
+    @apply text-primary-500 underline hover:no-underline
+  }
+
+  /* blog section */
+  .blog-section{
+    @apply container flex flex-col gap-10
+  }
+  .blog-divider{
+    @apply grid grid-cols-1 lg:grid-cols-4 gap-6
+  }
+
+  /* subscribe section */
+  .subscribe-section{
+    @apply container flex flex-col gap-10
+  }
+
+  .footer-section{
+    @apply container
+  }
+}

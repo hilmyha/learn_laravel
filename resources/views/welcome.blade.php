@@ -6,11 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Haidarsite | Home</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   @vite('resources/css/app.css')
 </head>
 <body>
-  <h1>Welcome</h1>
 
+  <nav>
+    <div class="navbar">
+      <h3 class="text-h3 text-primary-500 border "><a href="/">Yuh<span class="text-secondary-500">Belajar</span></a></h3>
+  
+      <div class="nav-container">
+        <ul id="navbar-nav" class="hidden md:flex">
+          <li class="nav-li"><a href="/">Home</a></li>
+          <li class="nav-li"><a href="/about">About</a></li>
+          <li class="nav-li"><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+      <div class="toggler">
+        <a href="/" class="toggler-btn ">Get Started</a>
+        <span id="nav-toggler" class="toggler-btn block md:hidden"><i class="fa-solid fa-bars"></i></span>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container py-[120px]">
+    <h1>Landing Page</h1>
+
+  </div>
+
+
+
+  <script src="https://kit.fontawesome.com/8807866152.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   {{-- javascript --}}
   @vite('resources/js/app.js')
 </body>
