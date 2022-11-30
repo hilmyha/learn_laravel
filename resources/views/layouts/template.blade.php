@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Haidarsite | Home</title>
+  <title>Blogsite | {{ $title }}</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +22,10 @@
   @include('partials.navbar')
 
 
-  <div class="container py-[120px]">
+  <article class="container">
     @yield('container')
 
-  </div>
+  </article>
 
 
 
