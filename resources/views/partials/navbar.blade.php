@@ -6,7 +6,7 @@
       <ul id="navbar-nav" class="hidden md:flex">
         <li class="nav-li {{ ($title === 'Home' ? 'text-primary-500 font-bold' : '') }}"><a href="/">Home</a></li>
         <li class="nav-li {{ ($title === 'About' ? 'text-primary-500 font-bold' : '') }}"><a href="/about">About</a></li>
-        <li class="nav-li {{ ($title === 'Posts' ? 'text-primary-500 font-bold' : '') }}"><a href="/blog">Blog</a></li>
+        <li class="nav-li {{ ($title === 'Posts' ? 'text-primary-500 font-bold' : '') }}"><a href="/posts">Blog</a></li>
       </ul>
     </div>
     <div class="toggler">
