@@ -26,6 +26,12 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('admin'),
         ]);
 
+        User::create([
+            'name' => 'Zaky Farras',
+            'email' => 'zaky@haidar.com',
+            'password' => bcrypt('admin'),
+        ]);
+
         Category::create([
             'name' => 'Programming',
             'slug' => 'programming',
@@ -45,7 +51,7 @@ class DatabaseSeeder extends Seeder
             'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum maxime eos corrupti, libero incidunt qui iste? Animi, cupiditate.',
             'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum maxime eos corrupti, libero incidunt qui iste? Animi, cupiditate. Hic cum eos illo tempore nihil esse saepe numquam voluptatem pariatur animi qui atque ipsa, excepturi doloremque voluptas sunt debitis, iusto nostrum totam! Molestias et sunt dicta cupiditate, dolores obcaecati dolor quas similique, dignissimos reprehenderit labore amet voluptates excepturi modi optio saepe rerum quo repellendus vitae temporibus esse! Porro quos quis hic excepturi suscipit, corrupti soluta ducimus consequatur, doloribus repellendus aspernatur, quidem maxime voluptates totam culpa exercitationem modi fuga. Quaerat fuga qui, sed neque saepe et dolore odio accusantium nisi tempore.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum maxime eos corrupti, libero incidunt qui iste? Animi, cupiditate. Hic cum eos illo tempore nihil esse saepe numquam voluptatem pariatur animi qui atque ipsa, excepturi doloremque voluptas sunt debitis, iusto nostrum totam! Molestias et sunt dicta cupiditate, dolores obcaecati dolor quas similique, dignissimos reprehenderit labore amet voluptates excepturi modi optio saepe rerum quo repellendus vitae temporibus esse! Porro quos quis hic excepturi suscipit, corrupti soluta ducimus consequatur, doloribus repellendus aspernatur, quidem maxime voluptates totam culpa exercitationem modi fuga. Quaerat fuga qui, sed neque saepe et dolore odio accusantium nisi tempore.</p>',
             'category_id' => 1,
-            'user_id' => 1,
+            'user_id' => 2,
         ]);
         Post::create([
             'title' => 'Judul Kedua',
@@ -61,7 +67,7 @@ class DatabaseSeeder extends Seeder
             'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum maxime eos corrupti, libero incidunt qui iste? Animi, cupiditate.',
             'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum maxime eos corrupti, libero incidunt qui iste? Animi, cupiditate. Hic cum eos illo tempore nihil esse saepe numquam voluptatem pariatur animi qui atque ipsa, excepturi doloremque voluptas sunt debitis, iusto nostrum totam! Molestias et sunt dicta cupiditate, dolores obcaecati dolor quas similique, dignissimos reprehenderit labore amet voluptates excepturi modi optio saepe rerum quo repellendus vitae temporibus esse! Porro quos quis hic excepturi suscipit, corrupti soluta ducimus consequatur, doloribus repellendus aspernatur, quidem maxime voluptates totam culpa exercitationem modi fuga. Quaerat fuga qui, sed neque saepe et dolore odio accusantium nisi tempore.</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rerum maxime eos corrupti, libero incidunt qui iste? Animi, cupiditate. Hic cum eos illo tempore nihil esse saepe numquam voluptatem pariatur animi qui atque ipsa, excepturi doloremque voluptas sunt debitis, iusto nostrum totam! Molestias et sunt dicta cupiditate, dolores obcaecati dolor quas similique, dignissimos reprehenderit labore amet voluptates excepturi modi optio saepe rerum quo repellendus vitae temporibus esse! Porro quos quis hic excepturi suscipit, corrupti soluta ducimus consequatur, doloribus repellendus aspernatur, quidem maxime voluptates totam culpa exercitationem modi fuga. Quaerat fuga qui, sed neque saepe et dolore odio accusantium nisi tempore.</p>',
             'category_id' => 3,
-            'user_id' => 1,
+            'user_id' => 2,
         ]);
 
 
