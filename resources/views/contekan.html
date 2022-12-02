@@ -22,3 +22,9 @@ Category::create([
   'name' => 'Personal',
   'slug' => 'personal',
 ])
+
+User::create([
+  'name' => 'Ahmad Haidar',
+  'email' => 'haidar@haidar.com',
+  'password' => bcrypt('admin'),
+])
