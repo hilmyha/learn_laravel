@@ -1,3 +1,5 @@
+import './bootstrap';
+
 $(document).ready(function () {
   $('#nav-toggler').click(function () {
     $('#navbar-nav').toggleClass('hidden')
