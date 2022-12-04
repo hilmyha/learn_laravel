@@ -22,7 +22,7 @@
   @include('partials.navbar')
 
 
-  <article class="container">
+  <article class="container grid gap-8">
     @yield('container')
 
   </article>
