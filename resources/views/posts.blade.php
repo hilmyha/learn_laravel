@@ -3,6 +3,13 @@
 @section('container')
   <h1>{{ $title }}</h1>
 
+  <form class="my-6" action="/posts">
+    <div class="grid grid-flow-row md:grid-flow-col px-0 w-full">
+      <input type="text" name="search" value="{{ request('search') }}" class="focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 border border-slate-300 col-span-1 md:col-span-2 p-5" placeholder="Search">
+      <button type="submit" class="border p-5 bg-primary-500 hover:bg-secondary-500 transition text-white">Search</button>
+    </div>
+  </form>
+
   @if ($posts->count())
     
     <div class="card group my-8">
