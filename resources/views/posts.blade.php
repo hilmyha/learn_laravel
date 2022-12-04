@@ -5,7 +5,7 @@
 
   @if ($posts->count())
     
-    <div class="card group">
+    <div class="card group my-8">
       <div class="img-area">
         <img src="http://source.unsplash.com/1920x1080?{{ $posts[0]->category->name }}" alt="">
       </div>

@@ -4,9 +4,10 @@
 
     <div class="nav-container">
       <ul id="navbar-nav" class="hidden md:flex">
-        <li class="nav-li {{ ($title === 'Home' ? 'text-primary-500 font-bold' : '') }}"><a href="/">Home</a></li>
-        <li class="nav-li {{ ($title === 'About' ? 'text-primary-500 font-bold' : '') }}"><a href="/about">About</a></li>
-        <li class="nav-li {{ ($title === 'Posts' ? 'text-primary-500 font-bold' : '') }}"><a href="/posts">Blog</a></li>
+        <li class="nav-li {{ ($active === 'home' ? 'text-primary-500 font-bold' : '') }}"><a href="/">Home</a></li>
+        <li class="nav-li {{ ($active === 'about' ? 'text-primary-500 font-bold' : '') }}"><a href="/about">About</a></li>
+        <li class="nav-li {{ ($active === 'posts' ? 'text-primary-500 font-bold' : '') }}"><a href="/posts">Blog</a></li>
+        <li class="nav-li {{ ($active === 'categories' ? 'text-primary-500 font-bold' : '') }}"><a href="/categories">Categories</a></li>
       </ul>
     </div>
     <div class="toggler">
