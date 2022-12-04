@@ -16,7 +16,7 @@
         <div class="image-child">
           <div class="image-textarea">
             
-            <h5><a href="/categories/{{ $category->slug }}">{{ $category->name }}</a></h5>
+            <h5><a href="/posts?category={{ $category->slug }}">{{ $category->name }}</a></h5>
           
           </div>
         </div>
