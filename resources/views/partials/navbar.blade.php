@@ -11,7 +11,7 @@
       </ul>
     </div>
     <div class="toggler">
-      <a href="/" class="toggler-btn ">Get Started</a>
+      <a href="/login" class="toggler-btn {{ ($active === 'login' ? 'bg-primary-500 text-white' : '') }}">Get Started</a>
       <span id="nav-toggler" class="toggler-btn block md:hidden"><i class="fa-solid fa-bars"></i></span>
     </div>
   </div>
