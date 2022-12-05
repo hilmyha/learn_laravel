@@ -15,6 +15,12 @@
 </div>    
 @endif
 
+@if (session()->has('loginError'))
+<div class="bg-red-100 rounded-lg py-5 px-6 mb-4 text-base text-red-700" role="alert">
+  <h4 class="text-2xl font-medium leading-tight mb-2">{{ session('loginError') }}</h4>
+</div>    
+@endif
+
 <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="w-full max-w-md space-y-8">
     <div>
@@ -24,16 +30,20 @@
         <a href="/register" class="font-medium text-primary-400 hover:text-primary-500">Register</a>
       </p>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
+    <form class="mt-8 space-y-6" action="/login" method="POST">
+      @csrf
       <input type="hidden" name="remember" value="true">
       <div class="-space-y-px rounded-md shadow-sm">
         <div>
           <label for="email-address" class="sr-only">Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" placeholder="Email address">
+          <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm peer invalid:focus:ring-pink-600 invalid:text-pink-600 invalid:focus:border-pink-600" placeholder="Email address" autofocus>
+          @error('email')
+              <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
+          @enderror
         </div>
         <div>
           <label for="password" class="sr-only">Password</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" placeholder="Password">
+          <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" value="{{ old('email') }}" placeholder="Password">
         </div>
       </div>
 
