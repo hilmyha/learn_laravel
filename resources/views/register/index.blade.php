@@ -27,6 +27,7 @@
           <label for="username" class="sr-only">Username</label>
           <input id="username" name="username" type="text" autocomplete="username" class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm peer invalid:focus:ring-pink-600 invalid:text-pink-600 invalid:focus:border-pink-600" required value="{{ old('username') }}" placeholder="Username">
           @error('username')
+              
               <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
           @enderror
         </div>
