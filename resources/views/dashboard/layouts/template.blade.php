@@ -29,7 +29,7 @@
       <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
         <main>
           <div class="pt-6 px-4">
-              <div class="w-full grid gap-4">
+              <div class="w-full">
                 
                 @yield('container')
 
