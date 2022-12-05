@@ -10,7 +10,10 @@
         <a href="/login" class="font-medium text-primary-400 hover:text-primary-500">Login</a>
       </p>
     </div>
-    <form class="mt-8 space-y-6" action="#" method="POST">
+
+    <form class="mt-8 space-y-6" action="/register" method="POST">
+      @csrf
+
       <input type="hidden" name="remember" value="true">
       <div class="-space-y-px rounded-md shadow-sm">
         <div>
@@ -32,11 +35,6 @@
       </div>
 
       <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500">
-          <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
-        </div>
-
         <div class="text-sm">
           <a href="#" class="font-medium text-primary-400 hover:text-primary-500">Forgot your password?</a>
         </div>
@@ -48,6 +46,7 @@
         </button>
       </div>
     </form>
+
   </div>
 </div>
 
