@@ -1,6 +1,20 @@
 @extends('layouts.template')
 
 @section('container')
+
+@if (session()->has('success'))
+<div class="bg-green-100 rounded-lg py-5 px-6 mb-4 text-base text-green-700" role="alert">
+  <h4 class="text-2xl font-medium leading-tight mb-2">Well done!</h4>
+  <p class="mb-4">
+    {{ session('success') }}
+  </p>
+  <hr class="border-green-600 opacity-30">
+  <p class="mt-4 mb-0">
+    Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+  </p>
+</div>    
+@endif
+
 <div class="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="w-full max-w-md space-y-8">
     <div>
