@@ -37,9 +37,9 @@
                     {{ $post->category->name }}
                   </td>
                   <td class="py-4 px-6">
-                      <a href="/dashboard/posts/{{ $post->id }}" class="bg-cyan-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-eye"></i></a>
-                      <a href="/dashboard/posts/{{ $post->id }}" class="bg-secondary-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-pencil"></i></a>
-                      <a href="/dashboard/posts/{{ $post->id }}" class="bg-red-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-trash"></i></i></a>
+                      <a href="/dashboard/posts/{{ $post->slug }}" class="bg-cyan-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-eye"></i></a>
+                      <a href="#" class="bg-secondary-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-pencil"></i></a>
+                      <a href="#" class="bg-red-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-trash"></i></i></a>
                   </td>
               </tr>
             @endforeach
