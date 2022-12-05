@@ -24,10 +24,11 @@
               </li>
             </ul>
             <div class="py-1">
-              <form>
-                
+              <form class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600" action="/logout" method="post">
+                @csrf
+                <button type="submit">Sign Out</button>
               </form>
-              <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Sign Out</a>
+              {{-- <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600">Sign Out</a> --}}
             </div>
         </div>
 
