@@ -18,19 +18,31 @@
       <div class="-space-y-px rounded-md shadow-sm">
         <div>
           <label for="name" class="sr-only">Name</label>
-          <input id="name" name="name" type="text" autocomplete="name" required class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" placeholder="Name">
+          <input id="name" name="name" type="text" autocomplete="name" class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm peer invalid:focus:ring-pink-600 invalid:text-pink-600 invalid:focus:border-pink-600" required value="{{ old('name') }}" placeholder="Name">
+          @error('name')
+              <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
+          @enderror
         </div>
         <div>
           <label for="username" class="sr-only">Username</label>
-          <input id="username" name="username" type="text" autocomplete="username" required class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" placeholder="Username">
+          <input id="username" name="username" type="text" autocomplete="username" class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm peer invalid:focus:ring-pink-600 invalid:text-pink-600 invalid:focus:border-pink-600" required value="{{ old('username') }}" placeholder="Username">
+          @error('username')
+              <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
+          @enderror
         </div>
         <div>
           <label for="email-address" class="sr-only">Email address</label>
-          <input id="email-address" name="email" type="email" autocomplete="email" required class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" placeholder="Email address">
+          <input id="email-address" name="email" type="email" autocomplete="email" class="relative block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm peer invalid:focus:ring-pink-600 invalid:text-pink-600 invalid:focus:border-pink-600" required value="{{ old('email') }}" placeholder="Email address">
+          @error('email')
+              <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
+          @enderror
         </div>
         <div>
           <label for="password" class="sr-only">Password</label>
-          <input id="password" name="password" type="password" autocomplete="current-password" required class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm" placeholder="Password">
+          <input id="password" name="password" type="password" autocomplete="current-password" class="relative block w-full appearance-none rounded-none rounded-b-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm peer invalid:focus:ring-pink-600 invalid:text-pink-600 invalid:focus:border-pink-600" required value="{{ old('password') }}" placeholder="Password">
+          @error('password')
+              <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
+          @enderror
         </div>
       </div>
 
