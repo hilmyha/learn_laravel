@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Category;
@@ -80,4 +81,5 @@ Route::get('/dashboard', function(){
     return view('dashboard.index');
 })->middleware('auth');
 
+Route::get('/dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug']);
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');

@@ -5,6 +5,10 @@
   <div class="w-full grid gap-12 bg-white border border-gray-200 p-4 sm:p-6 xl:p-8 ">
     <h1>My Post</h1>
 
+    <div class="flex">
+      <a href="/dashboard/posts/create" class="bg-blue-500 p-4 text-white rounded-lg">Create post</a>
+
+    </div>
     
     <div class="overflow-x-auto relative">
       <table class="w-full text-sm text-left text-gray-500">

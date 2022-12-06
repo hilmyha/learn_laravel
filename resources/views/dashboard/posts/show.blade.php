@@ -8,10 +8,10 @@
         <img class="object-cover overflow-hidden" src="http://source.unsplash.com/1920x1080?{{ $post->category->name }}" alt="">
       </div>
       <h2>{{ $post->title }}</h2>
-      <div class="flex gap-8">
-        <a href="/dashboard/posts" class="p-4 bg-cyan-500 text-white text-center rounded-lg"><i class="fa-solid fa-eye"></i></a>
-        <a href="" class="p-4 bg-secondary-500 text-white text-center rounded-lg"><i class="fa-solid fa-pencil"></i></a>
-        <a href="" class="p-4 bg-red-500 text-white text-center rounded-lg"><i class="fa-solid fa-trash"></i></a>
+      <div class="flex gap-2">
+        <a href="/dashboard/posts" class="py-4 px-5 bg-cyan-500 text-white text-center rounded-lg"><i class="fa-solid fa-eye"></i></a>
+        <a href="" class="py-4 px-5 bg-secondary-500 text-white text-center rounded-lg"><i class="fa-solid fa-pencil"></i></a>
+        <a href="" class="py-4 px-5 bg-red-500 text-white text-center rounded-lg"><i class="fa-solid fa-trash"></i></a>
       </div>
       {!! $post->body !!} 
     </div>
