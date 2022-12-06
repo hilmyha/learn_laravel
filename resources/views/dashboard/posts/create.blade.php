@@ -6,7 +6,8 @@
     <h1>Create New Post</h1>
 
     <div class="mt-5 md:col-span-2 md:mt-0">
-      <form action="#" method="POST">
+      <form action="/dashboard/posts" method="POST">
+        @csrf
           <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
             
             <div>
@@ -31,15 +32,14 @@
               </select>
             </div>
             <div>
-              <label for="about" class="block text-sm font-medium text-gray-700">About</label>
-              <div class="mt-1">
-                <textarea id="about" name="about" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" placeholder="you@example.com"></textarea>
-              </div>
+              <label for="body" class="block text-sm font-medium text-gray-700">Body</label>
+              <input id="body" type="hidden" name="body">
+              <trix-editor input="body"></trix-editor>
             </div>
 
             
-          <div class="px-4 py-3 text-right sm:px-6">
-            <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Save</button>
+          <div class="px-4 py-3 sm:px-6">
+            <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create post</button>
           </div>
       </form>
     </div>
@@ -54,6 +54,10 @@
       fetch('/dashboard/posts/checkSlug?title=' + title.value)
         .then(response => response.json())
         .then(data => slug.value = data.slug)
+    })
+
+    document.addEventListener('trix-file-accept', function (e) {
+      e.preventDefault()
     })
   </script>
 @endsection
