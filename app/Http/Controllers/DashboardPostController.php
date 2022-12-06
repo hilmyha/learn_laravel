@@ -41,7 +41,15 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+        $vaidateData = $request->validate([
+            'title' => 'required|max:255',
+            'slug' => 'required|unique:posts',
+            'category' => 'required',
+            'body' => 'required',
+        ]);
+
+        // $vaidateData['user_id'] = auth()->user()->id;
+        // $vaidateData['excerpt'] = auth()->user()->id;
     }
 
     /**
