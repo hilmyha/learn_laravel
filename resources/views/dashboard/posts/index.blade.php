@@ -47,8 +47,12 @@
                   </td>
                   <td class="py-4 px-6">
                       <a href="/dashboard/posts/{{ $post->slug }}" class="bg-cyan-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-eye"></i></a>
-                      <a href="#" class="bg-secondary-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-pencil"></i></a>
-                      <a href="#" class="bg-red-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-trash"></i></i></a>
+                      <a href="/dashboard/posts/{{ $post->slug }}/edit" class="bg-secondary-500 p-3 text-white rounded-lg hover:bg-primary-500"><i class="fa-solid fa-pencil"></i></a>
+                      <form class="inline" action="/dashboard/posts/{{ $post->slug }}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button class="bg-red-500 p-3 text-white rounded-lg hover:bg-primary-500" onclick="return confirm('Are you sure?')"><i class="fa-solid fa-trash"></i></button>
+                      </form>
                   </td>
               </tr>
             @endforeach

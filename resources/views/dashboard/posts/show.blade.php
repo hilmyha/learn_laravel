@@ -10,8 +10,12 @@
       <h2>{{ $post->title }}</h2>
       <div class="flex gap-2">
         <a href="/dashboard/posts" class="py-4 px-5 bg-cyan-500 text-white text-center rounded-lg"><i class="fa-solid fa-eye"></i></a>
-        <a href="" class="py-4 px-5 bg-secondary-500 text-white text-center rounded-lg"><i class="fa-solid fa-pencil"></i></a>
-        <a href="" class="py-4 px-5 bg-red-500 text-white text-center rounded-lg"><i class="fa-solid fa-trash"></i></a>
+        <a href="/dashboard/posts/{{ $post->slug }}/edit" class="py-4 px-5 bg-secondary-500 text-white text-center rounded-lg"><i class="fa-solid fa-pencil"></i></a>
+        <form class="inline" action="/dashboard/posts/{{ $post->slug }}" method="post">
+          @method('delete')
+          @csrf
+          <button class="bg-red-500 py-4 px-5 text-white text-center rounded-lg" onclick="return confirm('Are you sure?')"><i class="fa-solid fa-trash"></i></button>
+        </form>
       </div>
       {!! $post->body !!} 
     </div>
