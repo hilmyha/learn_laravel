@@ -6,10 +6,9 @@
     <h1>Create New Post</h1>
 
     <div class="mt-5 md:col-span-2 md:mt-0">
-      <form action="/dashboard/posts" method="POST">
+      <form action="/dashboard/posts" method="post">
         @csrf
           <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
-            
             <div>
               <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
               <div class="mt-1 flex rounded-md shadow-sm">
@@ -49,11 +48,9 @@
               @enderror
               <trix-editor input="body"></trix-editor>
             </div>
-
-            
-          <div class="px-4 py-3 sm:px-6">
-            <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create post</button>
-          </div>
+            <div class="">
+              <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create post</button>
+            </div>
       </form>
     </div>
   </div>

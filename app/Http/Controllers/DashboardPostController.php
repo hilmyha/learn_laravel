@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
-use \Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Str;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class DashboardPostController extends Controller
 {
@@ -41,15 +42,19 @@ class DashboardPostController extends Controller
      */
     public function store(Request $request)
     {
-        $vaidateData = $request->validate([
+        $vaidatedData = $request->validate([
             'title' => 'required|max:255',
             'slug' => 'required|unique:posts',
-            'category' => 'required',
-            'body' => 'required',
+            'category_id' => 'required',
+            'body' => 'required'
         ]);
+        $vaidatedData['user_id'] = auth()->user()->id;
+        $vaidatedData['excerpt'] = Str::words(strip_tags($request->body), 200);
+        
+        // dd($vaidatedData);
+        Post::create($vaidatedData);
 
-        // $vaidateData['user_id'] = auth()->user()->id;
-        // $vaidateData['excerpt'] = auth()->user()->id;
+        return redirect('/dashboard/posts')->with('success', 'Post has been added');
     }
 
     /**
@@ -101,7 +106,7 @@ class DashboardPostController extends Controller
 
     public function checkSlug(Request $request)
     {
-        $slug = $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
         return response()->json(['slug' => $slug]);
     }
 }
