@@ -5,7 +5,12 @@
   <div class="w-full grid gap-12 bg-white border border-gray-200 p-4 sm:p-6 xl:p-8 ">
     <div class="border grid gap-6 mb-8">
       <div class="h-[500px]">
-        <img class="object-cover overflow-hidden" src="http://source.unsplash.com/1920x1080?{{ $post->category->name }}" alt="">
+        @if ($post->image)
+          <img class="object-cover overflow-hidden" src="{{ asset('storage/' . $post->image) }}" alt="">
+            
+        @else
+          <img class="object-cover overflow-hidden" src="http://source.unsplash.com/1920x1080?{{ $post->category->name }}" alt="">
+        @endif
       </div>
       <h2>{{ $post->title }}</h2>
       <div class="flex gap-2">

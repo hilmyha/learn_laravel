@@ -6,7 +6,7 @@
     <h1>Create New Post</h1>
 
     <div class="mt-5 md:col-span-2 md:mt-0">
-      <form action="/dashboard/posts" method="post">
+      <form action="/dashboard/posts" method="post" enctype="multipart/form-data">
         @csrf
           <div class="space-y-6 bg-white px-4 py-5 sm:p-6">
             <div>
@@ -40,6 +40,13 @@
                 @endforeach
               </select>
             </div>
+            <div>              
+              <label class="block mb-2 text-sm font-medium text-gray-900" for="image">Post Image</label>
+              <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 peer" id="image" type="file" name="image">
+              @error('image')
+                <div class="my-2 peer-invalid:visible text-pink-600 text-h7">{{ $message }}</div>
+              @enderror
+            </div>
             <div>
               <label for="body" class="block text-sm font-medium text-gray-700">Body</label>
               <input id="body" type="hidden" name="body" value="{{ old('body') }}">
@@ -48,7 +55,7 @@
               @enderror
               <trix-editor input="body"></trix-editor>
             </div>
-            <div class="">
+            <div>
               <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Create post</button>
             </div>
       </form>

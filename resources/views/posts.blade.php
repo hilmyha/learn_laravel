@@ -20,7 +20,12 @@
     
     <div class="card group my-8">
       <div class="img-area">
-        <img src="http://source.unsplash.com/1920x1080?{{ $posts[0]->category->name }}" alt="">
+        @if ($posts[0]->image)
+          <img class="object-cover overflow-hidden" src="{{ asset('storage/' . $posts[0]->image) }}" alt="">
+            
+        @else
+          <img class="object-cover overflow-hidden" src="http://source.unsplash.com/1920x1080?{{ $posts[0]->category->name }}" alt="">
+        @endif
       </div>
 
       <h6 class="text-title-300 group-hover:text-white">By <a class="group-hover:text-secondary-500" href="/posts?author={{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a> in <a class="group-hover:text-secondary-500" href="/posts?category={{ $posts[0]->category->slug }}">{{ $posts[0]->category->name }}</a> {{ $posts[0]->created_at->diffForHumans() }} </h6>
@@ -37,7 +42,12 @@
   
     <div class="card group">
       <div class="img-area">
-        <img src="http://source.unsplash.com/1920x1080?{{ $post->category->name }}" alt="">
+        @if ($post->image)
+          <img class="object-cover overflow-hidden" src="{{ asset('storage/' . $post->image) }}" alt="">
+            
+        @else
+          <img class="object-cover overflow-hidden" src="http://source.unsplash.com/1920x1080?{{ $post->category->name }}" alt="">
+        @endif
       </div>
       <h6 class="text-title-300 group-hover:text-white">By <a class="group-hover:text-secondary-500" href="/posts?author={{ $post->author->username }}">{{ $post->author->name }}</a> in <a class="group-hover:text-secondary-500" href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a> </h6>
       <h3 class="text-title-500 group-hover:text-white"><a class="group-hover:text-secondary-500" href="/posts/{{ $post->slug }}">{{ $post->title }}</a></h3>
